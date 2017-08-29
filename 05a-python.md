@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+ >> Python lists and tuples are both compound data types which are used to group together values. However, lists are mutable and typically contain homogeneous data structures while tuples are immutable and typically contain heterogeneous data structures. Their syntax also varies with lists being enclosed by square brackets while tuples are enclosed by standard parentheses.  Since dictionaries keys require immutable elements, only tuples will work as keys so long as its objects are immutable.
 
 ---
 
@@ -20,7 +20,12 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python lists and sets are both mutable compound data types used to group together values.  Lists are ordered whereas sets are unordered.  Moreover, sets do not have duplicate values. In terms of syntax, lists use square brackets while sets use curly braces or the set() function.
+
+List Example: domesticated_animals = ['cat', 'dog', 'hamster', 'lizard']
+Set Example: zoo_animals = set(['elephant', 'giraffe', 'gazelle', 'gorilla'])
+
+It is faster to find an element within a set as sets use hashtables as their underlying data structure.
 
 ---
 
@@ -28,7 +33,12 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python's 'lambda' expressions create small anonymous functions using the lambda keyword.  They are generally used as arguments within other, named functions but can be used whenever we require a temporary, nameless function.
+
+Example using a 'lambda' with the 'sorted' function:
+
+zoo_inventory = [('zebra', 5), ('giraffe', 2), ('gorilla', 3)]
+sorted(zoo_inventory, key=lambda age:age[1]) #sort by number of animals
 
 ---
 
