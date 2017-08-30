@@ -22,9 +22,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> Python lists and sets are both mutable compound data types used to group together values.  Lists are ordered whereas sets are unordered.  Moreover, sets do not have duplicate values. In terms of syntax, lists use square brackets while sets use curly braces or the set() function.
 
->>List Example: domesticated_animals = ['cat', 'dog', 'hamster', 'lizard']
+>>List Example: 
+```python
+domesticated_animals = ['cat', 'dog', 'hamster', 'lizard']
 Set Example: zoo_animals = set(['elephant', 'giraffe', 'gazelle', 'gorilla'])
-
+```
 >>It is faster to find an element within a set as sets use hashtables as their underlying data structure.
 
 ---
@@ -36,9 +38,11 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> Python's 'lambda' expressions create small anonymous functions using the lambda keyword.  They are generally used as arguments within other, named functions but can be used whenever we require a temporary, nameless function. The syntax for a lambda expressions is lambda x,y: func(x,y)
 
 >>Example using a 'lambda' with the 'sorted' function:
-
->>zoo_inventory = [('zebra', 5), ('giraffe', 2), ('gorilla', 3), ('humans', 800)]
+>>```python
+zoo_inventory = [('zebra', 5), ('giraffe', 2), ('gorilla', 3), ('humans', 800)]
 sorted(zoo_inventory, key=lambda age:age[1]) #sort by number of animals
+```
+
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
@@ -49,32 +53,34 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> Example of LC v. 'map'
 
->> '''python
+>> ```python
 #sqr each number in a defined list
 numbers = [1,2,3,4,5,6,7,8,9,10]
 lc_sqr = [x ** 2 for x in numbers]
 map_sqr = list (map(lambda x: x**2, numbers))
-'''
+```
 
 >> Example of LC v. 'filter'
 
->> '''python
+>> ```python
 #filter for only even numbers in a defined list
 numbers = [1,2,3,4,5,6,7,8,9,10]
 lc_evens = [x for x in numbers if x % 2 == 0]
 filter_evens = list(lambda x: x % 2 == 0, numbers)
-'''
+```
 >> Example of set comprehension
->>#dedupe and sort a list
+>>```python
+#dedupe and sort a list
 >>numbers = [1,1,1,5,2,1,15,2,22,32]
 >>set_comp = {n for n in numbers}
-
+```
 >> Example of dictinoary comprehension
 
->>#return dictionary with key of abc and value of 0-4
->>abc = ['a','b','c','d','e']
->>dict_comp = {k: v for (k,v) in zip(abc, range(4))}
-
+>>```python
+#return dictionary with key of abc and value of 0-4
+abc = ['a','b','c','d','e']
+dict_comp = {k: v for (k,v) in zip(abc, range(4))}
+```
 
 ---
 
