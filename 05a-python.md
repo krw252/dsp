@@ -49,18 +49,21 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> Example of LC v. 'map'
 
->> #sqr each number in a defined list
->>numbers = [1,2,3,4,5,6,7,8,9,10]
->>lc_sqr = [x ** 2 for x in numbers]
->>map_sqr = list (map(lambda x: x**2, numbers))
+>> '''python
+#sqr each number in a defined list
+numbers = [1,2,3,4,5,6,7,8,9,10]
+lc_sqr = [x ** 2 for x in numbers]
+map_sqr = list (map(lambda x: x**2, numbers))
+'''
 
 >> Example of LC v. 'filter'
 
->> #filter for only even numbers in a defined list
->>numbers = [1,2,3,4,5,6,7,8,9,10]
->>lc_evens = [x for x in numbers if x % 2 == 0]
->>filter_evens = list(lambda x: x % 2 == 0, numbers)
-
+>> '''python
+#filter for only even numbers in a defined list
+numbers = [1,2,3,4,5,6,7,8,9,10]
+lc_evens = [x for x in numbers if x % 2 == 0]
+filter_evens = list(lambda x: x % 2 == 0, numbers)
+'''
 >> Example of set comprehension
 >>#dedupe and sort a list
 >>numbers = [1,1,1,5,2,1,15,2,22,32]
