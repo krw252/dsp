@@ -69,10 +69,10 @@ filter_evens = list(lambda x: x % 2 == 0, numbers)
 >> Example of set comprehension
 ```python
 #dedupe and sort a list
->>numbers = [1,1,1,5,2,1,15,2,22,32]
->>set_comp = {n for n in numbers}
+numbers = [1,1,1,5,2,1,15,2,22,32]
+set_comp = {n for n in numbers}
 ```
->> Example of dictinoary comprehension
+>> Example of dictionary comprehension
 ```python
 #return dictionary with key of abc and value of 0-4
 abc = ['a','b','c','d','e']
