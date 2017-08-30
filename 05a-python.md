@@ -38,7 +38,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> Python's 'lambda' expressions create small anonymous functions using the lambda keyword.  They are generally used as arguments within other, named functions but can be used whenever we require a temporary, nameless function. The syntax for a lambda expressions is lambda x,y: func(x,y)
 
 >>Example using a 'lambda' with the 'sorted' function:
->>```python
+```python
 zoo_inventory = [('zebra', 5), ('giraffe', 2), ('gorilla', 3), ('humans', 800)]
 sorted(zoo_inventory, key=lambda age:age[1]) #sort by number of animals
 ```
@@ -52,8 +52,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> List comprehension is a way to define and create a list in Python in which a method iterates over another list to output a new list as defined by the applied method.  For example, the list comprehension list(x for x in range(0,51) if x % 2 == 0) will iterate over the range(0,51) and return a list of numbers which satisfy the 'if' criteria (divisible by 2).  List comprehensions and 'map' and 'filter' functions can do very similar things but vary in terms of readability and sometimes speed.
 
 >> Example of LC v. 'map'
-
->> ```python
+```python
 #sqr each number in a defined list
 numbers = [1,2,3,4,5,6,7,8,9,10]
 lc_sqr = [x ** 2 for x in numbers]
@@ -61,22 +60,20 @@ map_sqr = list (map(lambda x: x**2, numbers))
 ```
 
 >> Example of LC v. 'filter'
-
->> ```python
+```python
 #filter for only even numbers in a defined list
 numbers = [1,2,3,4,5,6,7,8,9,10]
 lc_evens = [x for x in numbers if x % 2 == 0]
 filter_evens = list(lambda x: x % 2 == 0, numbers)
 ```
 >> Example of set comprehension
->>```python
+```python
 #dedupe and sort a list
 >>numbers = [1,1,1,5,2,1,15,2,22,32]
 >>set_comp = {n for n in numbers}
 ```
 >> Example of dictinoary comprehension
-
->>```python
+```python
 #return dictionary with key of abc and value of 0-4
 abc = ['a','b','c','d','e']
 dict_comp = {k: v for (k,v) in zip(abc, range(4))}
