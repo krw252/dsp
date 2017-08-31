@@ -94,14 +94,6 @@ date_stop = '07-28-2015'
 
 >> 937 days
 
-```python
-from datetime import datetime
-date_start = '01-02-2013'    
-date_stop = '07-28-2015'
-days_between = datetime.strptime(date_stop, '%m-%d-%Y') - datetime.strptime(date_start, '%m-%d-%Y')
-print(days_between)
-```
-
 b.  
 ```
 date_start = '12312013'  
@@ -109,14 +101,6 @@ date_stop = '05282015'
 ```
 
 >> 513 days
-
-```python
-from datetime import datetime
-date_start = '12312013'  
-date_stop = '05282015' 
-days_between = datetime.strptime(date_stop, '%m%d%Y') - datetime.strptime(date_start, '%m%d%Y')
-print(days_between)
-```
 
 c.  
 ```
