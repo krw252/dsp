@@ -3,6 +3,12 @@
 
 
 def donuts(count):
+    if 0 < count < 9:
+        print ('Number of donuts:', count)
+    elif count < 0:
+        print ("Can't have negative pastries!")
+    else:
+        print ('Number of donuts: Many')
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
