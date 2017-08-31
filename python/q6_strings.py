@@ -9,6 +9,7 @@ def donuts(count):
         print ("Can't have negative pastries!")
     else:
         print ('Number of donuts: Many')
+        
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -28,6 +29,12 @@ def donuts(count):
 
 
 def both_ends(s):
+    def both_ends(s):
+   if len(s) < 2:
+        return ''
+   else:
+        return s[0] + s[1] + s[len(s) - 2] + s[len(s) - 1]
+    
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
