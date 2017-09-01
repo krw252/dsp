@@ -26,7 +26,8 @@ def lowest_goal_diff(dict):
         if int(dict[d]['Goals']) - int(dict[d]['Goals Allowed']) < diff:
             diff = int(dict[d]['Goals']) - int(dict[d]['Goals Allowed'])
             team = dict[d]['Team']
-    return 'Team with the lowest goal differential was %s with a differential of %d.' % (team,diff)
+    return 'The team with the lowest goal differential was %s with a differential of %d.' % (team,diff)
 
 print (lowest_goal_diff(football_data))
-#Team with the lowest goal differential was Leicester with a differential of -34.
+
+#The team with the lowest goal differential was Leicester with a differential of -34.
