@@ -3,7 +3,7 @@
 
 
 def match_ends(words):
-        count = 0
+    count = 0
     for w in words:
         if len(w) >= 2 and w[0] == w[len(w)-1]:
             count = count + 1
