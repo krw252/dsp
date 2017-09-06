@@ -157,16 +157,18 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    new_word = ''
-    if len(a) % 2 == 0 and len(b) % 2 == 0:
-        new_word = a[0:len(a)//2] + b[0:len(b)//2] + a[len(a)//2:len(a)] + b[len(b)//2:len(b)]
-    elif len(a) % 2 != 0 and len(b) % 2 == 0:
-        new_word = a[0:len(a)//2 + 1] + b[0:len(b)//2] + a[len(a)//2 + 1:len(a)] + b[len(b)//2:len(b)]
-    elif len(a) % 2 == 0 and len(b) % 2 != 0:
-        new_word = a[0:len(a)//2] + b[0:len(b)//2 + 1] + a[len(a)//2:len(a)] + b[len(b)//2 + 1:len(b)]
+    if len(s1) % 2 == 0 and len(s2) % 2 == 0:
+        return (s1[:int(len(s1)/2)] + s2 [:int(len(s2)/2)] 
+                   + s1[int(len(s1)/2):] + s2[int(len(s2)/2):])
+    elif len(s1) % 2 != 0 and len(s2) % 2 == 0:
+        return (s1[:int(len(s1)/2) + 1] + s2 [:int(len(s2)/2)] 
+                   + s1[int(len(s1)/2 + 1):] + s2[int(len(s2)/2):])
+    elif len(s1) % 2 != 0 and len(s2) % 2 != 0:
+        return (s1[:int(len(s1)/2) + 1] + s2 [:int(len(s2)/2) + 1] 
+                   + s1[int(len(s1)/2 + 1):] + s2[int(len(s2)/2) + 1:])
     else:
-        new_word = a[0:len(a)//2 + 1] + b[0:len(b)//2 + 1] + a[len(a)//2 + 1:len(a)] + b[len(b)//2 + 1:len(b)]
-    return new_word
+        return (s1[:int(len(s1)/2)] + s2 [:int(len(s2)/2) + 1] 
+                   + s1[int(len(s1)/2):] + s2[int(len(s2)/2) + 1:])
 
     """
     Consider dividing a string into two halves. If the length is even,
