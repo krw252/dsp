@@ -73,11 +73,12 @@ def sort_last(tuples):
 def remove_adjacent(nums):
     temp = []
     for n in range(0,len(nums)-1):
-        if nums[n] == nums[n-1]:
+        if nums[n] == nums[n+1]:
             temp = temp
         else:
             temp.append(nums[n])
-    return temp
+    temp.append(nums[int(len(nums)-1)])
+    return (temp)
 
     """
     Given a list of numbers, return a list where all adjacent equal
