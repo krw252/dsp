@@ -1,9 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 11 15:33:01 2017
+
+@author: krw252
+"""
+
 import csv
 import re
 
 file = '/users/krw252/ds/metis/metisgh/prework/dsp/python/faculty.csv'
 
-def read_csv():
+def dict_read_csv():
     faculty_data = []
     data = open(file ,'r')
     reader = csv.DictReader(data)
@@ -12,7 +20,7 @@ def read_csv():
     data.close()
     return faculty_data
 
-faculty = read_csv()
+faculty = dict_read_csv()
 
 def count_degrees(csv_file_name):
     degrees = ('MD', 'MA', 'SCD', 'BSED', 'PHD', '0', 'MPH', 'MS', 'JD')
@@ -84,15 +92,26 @@ def domains(email_list):
         domains.append(d[1])
     return (set(domains))
 
+def read_csv():
+    faculty_data = []
+    data = open(file ,'r')
+    reader = csv.reader(data)
+    for row in reader:
+        faculty_data.append(row)
+    data.close()
+    return faculty_data
+
+faculty_b = read_csv()
+
 def get_dict():
-    del faculty[0]
+    del faculty_b[0]
     names = []
-    for row in faculty:
+    for row in faculty_b:
         name = row[0]
         last_name = name.rsplit()[0]
         names.append(last_name)
     info = []
-    for row in faculty:
+    for row in faculty_b:
         del row[0]
         info.append(row)
     final = dict(zip(names,info))
