@@ -92,33 +92,7 @@ def domains(email_list):
         domains.append(d[1])
     return (set(domains))
 
-def read_csv():
-    faculty_data = []
-    data = open(file ,'r')
-    reader = csv.reader(data)
-    for row in reader:
-        faculty_data.append(row)
-    data.close()
-    return faculty_data
-
-faculty_b = read_csv()
-
-def get_dict():
-    del faculty_b[0]
-    names = []
-    for row in faculty_b:
-        name = row[0]
-        last_name = name.rsplit()[0]
-        names.append(last_name)
-    info = []
-    for row in faculty_b:
-        del row[0]
-        info.append(row)
-    final = dict(zip(names,info))
-    return (final)
-
 print(count_degrees(faculty))
 print(count_titles(faculty))
 print(emails(faculty))
 print (domains(emails(faculty)))
-print (get_dict())
