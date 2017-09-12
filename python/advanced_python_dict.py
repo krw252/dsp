@@ -1,4 +1,3 @@
-
 import csv
 from collections import OrderedDict
 
@@ -16,33 +15,33 @@ def read_csv():
 faculty = read_csv()
 
 def faculty_dict():
-    del faculty[0]
     names = []
-    for row in faculty:
+    for row in faculty[1:]:
         name = row[0]
         last_name = name.rsplit()[0]
         names.append(last_name)
     info = []
-    for row in faculty:
-        del row[0]
-        info.append(row)
+    for row in faculty[1:]:
+        info.append(row[1:])
     final = dict(zip(names,info))
     return (final)
 
-print(list(faculty_dict().items())[:3])
-
 def professor_dict():
-    del faculty[0]
     names = []
-    for row in faculty:
+    for row in faculty[1:]:
         name = row[0]
         last_name = (name.rsplit()[0], name.rsplit()[-1])
         names.append(last_name)
     info = []
-    for row in faculty:
-        del row[0]
-        info.append(row)
+    for row in faculty[1:]:
+        info.append(row[1:])
     final = OrderedDict(zip(names,info))
     return (final)
 
-print(list(professor_dict().items())[:3])
+def last_name():
+    a = professor_dict()
+    for (f,l), v in a.items():
+        print ("%s: %s" % ((l,f), v))
+
+last_name()
+print('\n', list(faculty_dict().items())[:3], '\n\n', list(professor_dict().items())[:3])
