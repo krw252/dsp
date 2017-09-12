@@ -38,6 +38,7 @@ def professor_dict():
     final = OrderedDict(zip(names,info))
     return (final)
 
+#why does this function sort by second element of key?
 def last_name():
     a = professor_dict()
     for (f,l), v in a.items():
